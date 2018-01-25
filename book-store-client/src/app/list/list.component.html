@@ -1,0 +1,41 @@
+<!--<div class="example-container mat-elevation-z8">-->
+  <!--<div class="example-header">-->
+    <!--<mat-form-field>-->
+      <!--<input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">-->
+    <!--</mat-form-field>-->
+  <!--</div>-->
+
+  <!--<mat-table #table [dataSource]="dataSource">-->
+
+    <!--&lt;!&ndash; Position Column &ndash;&gt;-->
+    <!--<ng-container matColumnDef="id">-->
+      <!--<mat-header-cell *matHeaderCellDef> ID </mat-header-cell>-->
+      <!--<mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>-->
+    <!--</ng-container>-->
+
+    <!--&lt;!&ndash; Name Column &ndash;&gt;-->
+    <!--<ng-container matColumnDef="title">-->
+      <!--<mat-header-cell *matHeaderCellDef> Title </mat-header-cell>-->
+      <!--<mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>-->
+    <!--</ng-container>-->
+
+    <!--<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>-->
+    <!--<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>-->
+  <!--</mat-table>-->
+<!--</div>-->
+
+<!--<div class="mdl-grid items">-->
+  <!--<div class="mdl-cell mdl-cell&#45;&#45;6-col" layout="row" layout-wrap>-->
+    <!--<div *ngFor="let item of items | async"-->
+         <!--class="fem-card mdl-card mdl-shadow&#45;&#45;2dp" >-->
+        <!--<app-item [item]="item" (selected)="selectItem($event)" (deleted)="deleteItem($event)"></app-item>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div fxLayout="row" fxLayoutGap="10px">
+  <div *ngFor="let item of items | async"
+       class="fem-card mdl-card mdl-shadow--2dp" >
+    <app-item [item]="item" (selected)="selectItem($event)" (deleted)="deleteItem($event)"></app-item>
+  </div>
+</div>

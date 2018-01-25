@@ -1,0 +1,41 @@
+<!--<div (click)="selected.emit(item)">-->
+  <!--<div class="mdl-card__title">-->
+    <!--<h2 class="mdl-card__title-text">{{item.title}}</h2>-->
+  <!--</div>-->
+  <!--<div class="mdl-card__supporting-text">-->
+    <!--&lt;!&ndash;{{item.description}}&ndash;&gt;-->
+  <!--</div>-->
+  <!--<div class="mdl-card__menu">-->
+    <!--<button (click)="deleted.emit(item); $event.stopPropagation();"-->
+            <!--class="mdl-button mdl-button&#45;&#45;icon mdl-js-button mdl-js-ripple-effect">-->
+      <!--<i class="material-icons">close</i>-->
+    <!--</button>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+<mat-card class="card" (click)="selected.emit(item)">
+  <div class="mdl-card__menu">
+    <button (click)="deleted.emit(item); $event.stopPropagation();"
+            class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <i class="material-icons">close</i>
+    </button>
+  </div>
+  <mat-card-header>
+    <div mat-card-avatar class="card-header-image"></div>
+    <mat-card-title>{{item.title}}</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
